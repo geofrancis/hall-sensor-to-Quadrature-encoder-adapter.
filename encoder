@@ -5,9 +5,9 @@
 #define CW             1      // Assign a value to represent clock wise rotation
 #define CCW           -1      // Assign a value to represent counter-clock wise rotation
 
-bool HSU_Val = digitalRead(2);    // Set the U sensor value as boolean and read initial state
-bool HSV_Val = digitalRead(3);    // Set the V sensor value as boolean and read initial state 
-bool HSW_Val = digitalRead(4);    // Set the W sensor value as boolean and read initial state 
+bool HSU_Val = digitalRead(A2);    // Set the U sensor value as boolean and read initial state
+bool HSV_Val = digitalRead(A3);    // Set the V sensor value as boolean and read initial state 
+bool HSW_Val = digitalRead(A4);    // Set the W sensor value as boolean and read initial state 
 
 int direct = 1;       // Integer variable to store BLDC rotation direction
 int pulseCount;       // Integer variable to store the pulse count
@@ -23,8 +23,8 @@ float PPM;        // Float variable to store calculated pulses per minute
 float RPM;        // Float variable to store calculated revolutions per minute
 
 //OUTPUT//////////////
-const byte QuadratureA_DOPin = 6;
-const byte QuadratureB_DOPin = 5;
+const byte QuadratureA_DOPin = A6;
+const byte QuadratureB_DOPin = A5;
 
 
 const byte A = 1;
